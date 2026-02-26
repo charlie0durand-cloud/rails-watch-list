@@ -1,0 +1,14 @@
+
+<div class="header-movies">
+<h1>All Lists</h1>
+</div>
+
+<div class="container mt-4">
+  <div class="cards-index">
+<% @lists.each do |list| %>
+    <div class="card-index">
+  <h2><%= link_to list.name, list_path(list) %></h2>
+    </div>
+<% end %>
+  </div>
+</div>

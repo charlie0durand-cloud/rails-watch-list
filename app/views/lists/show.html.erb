@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-8">
+      <h1 class="my-4"><%= @list.name %></h1>
+      <div class="cards">
+      <% @list.movies.each do |movie| %>
+      <div class="card-custom mx-4">
+        <%= image_tag(movie.poster_url) %>
+      <div class="lower-card">
+        <%= movie.title %>
+        <%= link_to "Delete", list_bookmark_path(@list, @list.bookmarks.find_by(movie: movie)), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-secondary" %>
+      </div>
+      </div>
+      <% end %>
+    </div>
+    </div>
+
+    <div class="col-4 card-form">
+      <h1 class="my-4">Add a movie to this list</h1>
+
+      <div>
+        <%= simple_form_for [ @list, @bookmark ] do |f| %>
+        <%= f.input :comment %>
+        <%= f.association :movie %>
+        <%= f.submit "Add movie to list", class:"btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
