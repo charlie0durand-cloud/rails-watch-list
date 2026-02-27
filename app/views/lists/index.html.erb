@@ -5,10 +5,17 @@
 
 <div class="container mt-4">
   <div class="cards-index">
-<% @lists.each do |list| %>
-    <div class="card-index">
-  <h2><%= link_to list.name, list_path(list) %></h2>
-    </div>
-<% end %>
+    <% @lists.each do |list| %>
+      <% if list.photo.attached? %>
+        <div class="card-index"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, crop: :fill %>')">
+          <h2><%= link_to list.name, list_path(list) %></h2>
+        </div>
+      <% else %>
+        <div class="card-index">
+          <h2><%= link_to list.name, list_path(list) %></h2>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
