@@ -1,1 +1,90 @@
-// Specific CSS for your home-page
+.hero-index {
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,1)),
+    url('hero.png') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .hero-index-text {
+    text-align: center;
+    h1 {
+      color: white;
+      font-size: 50px;
+      font-family: "Arial";
+      font-weight: 600;
+    }
+  }
+}
+
+.cards-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 50px;
+  margin-top: -150px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-index {
+  border-radius: 5px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    text-decoration: none;
+    color:rgb(43, 43, 43);
+  }
+  h2 {
+    font-size: 30px;
+  }
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    border-radius: 5px;
+  }
+
+  h2, a {
+    position: relative;
+    z-index: 1; // sits above the overlay
+    color: white;
+  }
+}
+
+.nav-index {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 24px;
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+  }
+}
+
+.btn-hero {
+  background-color: #0F91FA;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 24px;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 16px;
+}
+
+a.btn-hero {
+  text-decoration: none;
+}

@@ -1,0 +1,54 @@
+.hero-show {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.card-custom {
+  background-color: #F8F9FA;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  img {
+    width: 100%;
+  }
+}
+
+.lower-card {
+  padding: 10px;
+}
+
+.card-form {
+  background-color: rgb(235, 235, 235);
+  padding: 30px;
+  border-radius: 5px;
+  h3 {
+    font-size: 20px;
+  }
+}
+
+.nav-show {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 24px;
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+  }
+}
+
+.list-name {
+  color: white;
+}

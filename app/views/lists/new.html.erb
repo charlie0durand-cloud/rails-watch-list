@@ -1,14 +1,20 @@
+<div class=hero-new>
+<nav class="nav-new">
+      <%= link_to "moviz", root_path, class: "mx-4" %>
+</nav>
+
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-6">
+    <div class="col-6 card-new-form my-4">
 
-      <h1 class="my-4">Create a new list</h1>
+      <h1 class="my-2">Create a new list</h1>
 
       <%= simple_form_for @list do |f| %>
       <%= f.input :name %>
       <%= f.input :photo, as: :file %>
-      <%= f.submit "Add list", class: "btn btn-danger" %>
+      <%= f.submit "Add list", class: "btn btn-hero" %>
       <% end %>
     </div>
   </div>
+</div>
 </div>
